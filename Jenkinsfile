@@ -24,19 +24,20 @@ pipeline{
             }
         }
     }
-    stage(maven build){
+    stage('maven build'){
        steps{
         script{
-            sh mvn clean install
+            sh 'mvn clean install'
         }
        }
     }
-    stage(static code analysis){
+    stage('static code analysis'){
         steps{
             script{
 
             }
         }
     }
+
 
 }
